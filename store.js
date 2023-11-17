@@ -22,7 +22,7 @@ function favoritesReducer(state = initialState, action) {
         }
         case "REMOVE_FAVORITE": {
             const removedFavorite = action.payload.favorite;
-            state.favorites.filter(favorite => favorite.id !== removedFavorite.id);
+            const favorites = state.favorites.filter(favorite => favorite.id !== removedFavorite.id);
             return { favorites };
         }
             default:
@@ -30,10 +30,10 @@ function favoritesReducer(state = initialState, action) {
     }
 }
 
-const action = { type: "ADD_FAVORITE", payload: { favorite: { title: "story1", id: 1 } } }
+// const action = { type: "ADD_FAVORITE", payload: { favorite: { title: "story1", id: 1 } } }
 
 const store = createStore(favoritesReducer);
-store.dispatch(action);
-console.log(store.getState());
+// store.dispatch(action);
+// console.log(store.getState());
 
 export default store;
