@@ -1,5 +1,5 @@
 export default function Comment(comment) {
-    console.log(comment);
+    // console.log(comment);
     const hasNestedComments = comment.comments.length > 0;
 
     return `

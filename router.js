@@ -19,7 +19,7 @@ export default class RouterHandler {
             { path: '/favorites', page: Favorites }
         ];
 
-        routes.forEach(({ path, page}) => {
+        routes.forEach(({ path, page }) => {
             router.on(path, () => {
                 page(path);
             }).resolve();

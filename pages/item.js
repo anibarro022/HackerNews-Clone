@@ -17,7 +17,7 @@ export default async function Item() {
     }
 
     if (hasError) {
-        view.innerHTML = `<div class="error">Error fetching story</div`;
+        view.innerHTML = `<div class="error">Error fetching story</div>`;
     }
 
     view.innerHTML = `
@@ -31,7 +31,7 @@ export default async function Item() {
 
 async function getStory() {
     const storyId = window.location.hash.split('?id=')[1];
-    const response = await fetch(`${baseUrl}/item/${storyId}`)
+    const response = await fetch(`${baseUrl}/item/${storyId}`);
     const story = await response.json();
     return story;
 }
