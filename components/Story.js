@@ -16,7 +16,7 @@ export default function Story(story) {
                 </a>
                 |
                 <span class="favorite" data-story='${JSON.stringify(story)}'>
-                    <img class="heart" src="#add-a-heart-icon">
+                    <img class="heart" src="https://microicon-clone.vercel.app/heart">
                     ${story.isFavorite ? "Remove From Favorites" : "Add To Favorites"}
                 </span>
             </div>
